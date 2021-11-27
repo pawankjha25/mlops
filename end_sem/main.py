@@ -30,12 +30,15 @@ def run_classifier(hyperparameter, run):
 def main():
     hyperparameters = [0.01, 0.001, 0.0001]
     mt_maps = {}
+    mt_maps2 = {}
     for hp in hyperparameters:
         for i in range(1, 4):
             mt_maps[i] = run_classifier(hp, i)
-        mt_maps[hp] = mt_maps[i]
+        mt_maps2[hp] = mt_maps
 
-    print(mt_maps)
+    mt_maps2
+
+    print(mt_maps2)
 
 
 if __name__=="__main__":
